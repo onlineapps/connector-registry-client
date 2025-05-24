@@ -68,13 +68,13 @@ Configuration can be provided via environment variables or constructor options:
 
 ## 🛠️ API Reference
 
-See [https://github.com/onlineapps/agent-registry-client/blob/main/docs/api.md](docs/api.md) for full details on classes, methods, and events.
+See [docs/api.md](https://github.com/onlineapps/agent-registry-client/blob/main/docs/api.md) for full details on classes, methods, and events.
 
 ## 📖 Documentation
 
-* Architecture overview: [https://github.com/onlineapps/agent-registry-client/blob/main/docs/architecture.md](docs/architecture.md)
-* API reference: [https://github.com/onlineapps/agent-registry-client/blob/main/docs/api.md](docs/api.md)
-* Examples: [https://github.com/onlineapps/agent-registry-client/blob/main/examples/basicUsage.js](examples/basicUsage.js)
+* Architecture overview: [docs/architecture.md](https://github.com/onlineapps/agent-registry-client/blob/main/docs/architecture.md)
+* API reference: [docs/api.md](https://github.com/onlineapps/agent-registry-client/blob/main/docs/api.md)
+* Examples: [examples/basicUsage.js](https://github.com/onlineapps/agent-registry-client/blob/main/examples/basicUsage.js)
 
 ## ✅ Testing
 
