@@ -93,8 +93,8 @@ npm test
 
 ## 🤝 Contributing
 
-Please read [https://github.com/onlineapps/agent-registry-client/blob/main/CONTRIBUTING.md](CONTRIBUTING.md) for details on submitting issues and pull requests.
+Please read [CONTRIBUTING.md](https://github.com/onlineapps/agent-registry-client/blob/main/CONTRIBUTING.md) for details on submitting issues and pull requests.
 
 ## 📜 License
 
-This project is licensed under the MIT License. See [https://github.com/onlineapps/agent-registry-client/blob/main/LICENSE](LICENSE) for details.
+This project is licensed under the MIT License. See [LICENSE](https://github.com/onlineapps/agent-registry-client/blob/main/LICENSE) for details.
