@@ -1,0 +1,79 @@
+# .github/workflows/nodejs.yml
+
+# GitHub Actions CI/CD pipeline for @onlineapps/agent-registry-client
+
+name: Node.js CI/CD
+
+on:
+push:
+branches:
+\- main              # build při pushi do main
+tags:
+\- 'v\*.*.*'          # release při pushi tagu SemVer
+pull\_request:
+branches:
+\- main              # build při otevření PR do main
+
+jobs:
+build:
+name: Build and Test
+runs-on: ubuntu-latest
+strategy:
+matrix:
+node-version: \[14.x, 16.x, 18.x]
+
+```
+steps:
+  - name: Checkout repository
+    uses: actions/checkout@v3
+
+  - name: Set up Node.js ${{ matrix.node-version }}
+    uses: actions/setup-node@v3
+    with:
+      node-version: ${{ matrix.node-version }}
+      cache: 'npm'
+
+  - name: Install dependencies
+    run: npm ci
+
+  - name: Lint code with ESLint
+    run: npm run lint
+
+  - name: Run tests with coverage
+    run: npm test -- --coverage
+
+  - name: Upload coverage to Codecov
+    uses: codecov/codecov-action@v3
+    with:
+      # jen pro privátní repozitáře; u veřejných můžeš ten řádek vynechat
+      token: ${{ secrets.CODECOV_TOKEN }}
+      files: coverage/lcov.info   # cesta k souboru, který jest vygeneruje
+      flags: unittests           # volitelně přideš štítek, když máš více typů reportů
+      fail_ci_if_error: true     # CI padne, pokud upload selže
+```
+
+release:
+name: Publish to npm
+runs-on: ubuntu-latest
+needs: build
+if: startsWith(github.ref, 'refs/tags/v')
+
+```
+steps:
+  - name: Checkout repository
+    uses: actions/checkout@v3
+
+  - name: Set up Node.js
+    uses: actions/setup-node@v3
+    with:
+      node-version: '16.x'
+      registry-url: 'https://registry.npmjs.org'
+
+  - name: Install dependencies
+    run: npm ci
+
+  - name: Publish package
+    env:
+      NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+    run: npm publish --access public
+```

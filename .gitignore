@@ -1,0 +1,38 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+.env.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Testing coverage
+coverage/
+
+# Build output
+dist/
+
+# IDE/editor directories
+.vscode/
+.idea/
+
+# macOS metadata
+.DS_Store
+
+# OS swap files
+*.swp
+*.swo
+
+# Jest snapshots
+**/__snapshots__/
+
+# npm pack files
+*.tgz
+
+# Lock files (if using yarn, keep Yarn.lock; if npm, keep package-lock.json)
+# Uncomment the next line if you prefer to ignore lock files:
+# package-lock.json

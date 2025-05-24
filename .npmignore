@@ -1,0 +1,19 @@
+# Exclude everything by default
+*
+
+# Include source code
+!src/
+!src/**
+
+# Include package metadata files
+!package.json
+!README.md
+!LICENSE
+
+# Include documentation
+!docs/architecture.md
+!docs/api.md
+
+# Include example usage
+!examples/
+!examples/**
