@@ -10,7 +10,8 @@
         "rabbitmq",
         "heartbeat",
         "api",
-        "environment"
+        "environment",
+        "nodejs"
     ],
     "files": [
         "src/",
