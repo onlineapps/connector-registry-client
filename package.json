@@ -3,6 +3,15 @@
     "version": "1.0.6",
     "license": "MIT",
     "description": "Agent-registry-client provides the core communication mechanism for microservices in this environment. It enables them to interact with a services_registry to receive and fulfill tasks by submitting heartbeats or their API descriptions.",
+    "keywords": [
+        "microservice",
+        "agent",
+        "registry",
+        "rabbitmq",
+        "heartbeat",
+        "api",
+        "environment"
+    ],
     "files": [
         "src/",
         "docs/",
