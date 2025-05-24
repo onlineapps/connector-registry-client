@@ -111,4 +111,4 @@ npm run lint
 
 For questions or support, open an issue or contact the maintainers via email:
 
-* [igor.lobovsky@onlineapps.cz](mailto:igor.lobovsky@onlineapps.cz)
+* [info@onlineapps.cz](mailto:info@onlineapps.cz)
