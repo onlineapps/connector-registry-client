@@ -68,13 +68,13 @@ Configuration can be provided via environment variables or constructor options:
 
 ## 🛠️ API Reference
 
-See [docs/api.md](docs/api.md) for full details on classes, methods, and events.
+See [https://github.com/onlineapps/agent-registry-client/blob/main/docs/api.md](docs/api.md) for full details on classes, methods, and events.
 
 ## 📖 Documentation
 
-* Architecture overview: [docs/architecture.md](docs/architecture.md)
-* API reference: [docs/api.md](docs/api.md)
-* Examples: [examples/basicUsage.js](examples/basicUsage.js)
+* Architecture overview: [https://github.com/onlineapps/agent-registry-client/blob/main/docs/architecture.md](docs/architecture.md)
+* API reference: [https://github.com/onlineapps/agent-registry-client/blob/main/docs/api.md](docs/api.md)
+* Examples: [https://github.com/onlineapps/agent-registry-client/blob/main/examples/basicUsage.js](examples/basicUsage.js)
 
 ## ✅ Testing
 
@@ -93,8 +93,8 @@ npm test
 
 ## 🤝 Contributing
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on submitting issues and pull requests.
+Please read [https://github.com/onlineapps/agent-registry-client/blob/main/CONTRIBUTING.md](CONTRIBUTING.md) for details on submitting issues and pull requests.
 
 ## 📜 License
 
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+This project is licensed under the MIT License. See [https://github.com/onlineapps/agent-registry-client/blob/main/LICENSE](LICENSE) for details.
