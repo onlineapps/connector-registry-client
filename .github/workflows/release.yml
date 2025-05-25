@@ -1,15 +1,16 @@
+
 name: Release
 
 on:
   push:
-    branches:
-      - main
+    tags:
+      - 'v*.*.*'
 
 permissions:
-  contents: write      # povolí push tagů a aktualizace release z Actions
-  issues: write        # povolí semantic-release zakládat/fixovat issues (fail comments)
-  packages: write      # pokud publikuješ do GitHub Packages
-  pull-requests: write # pokud bys náhodou chtěl upravovat PRs
+  contents: write
+  issues: write
+  packages: write
+  pull-requests: write
 
 jobs:
   release:
@@ -19,19 +20,19 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0     # potřebujeme celý Git history pro analysu
+          fetch-depth: 0
+      - name: Debug environment
+        run: |
+          echo "NPM_TOKEN is set: ${NPM_TOKEN:0:5}..." # Zobrazí pouze prvních 5 znaků pro bezpečnost
+          npx semantic-release --dry-run
 
       - name: Use Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18.x'
           registry-url: 'https://registry.npmjs.org'
-          scope: '@onlineapps' 
-          always-auth: true   
-
-      - name: Create .npmrc
-        run: |
-          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+          scope: '@onlineapps'
+          always-auth: true
 
       - name: Install dependencies
         run: npm ci
