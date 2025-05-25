@@ -6,11 +6,11 @@ module.exports = {
     jest: true
   },
   extends: [
-    'eslint:recommended',      // jen built-in JS pravidla
-    'plugin:prettier/recommended'
+    'eslint:recommended'      // jen built-in JS pravidla
+    //'plugin:prettier/recommended'
   ],
   rules: {
-    'no-console': 'off',
-    'prettier/prettier': 'error',
+    'no-console': 'off'
+    //'prettier/prettier': 'error',
   }
 };

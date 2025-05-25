@@ -24,7 +24,7 @@
     "main": "src/index.js",
     "scripts": {
         "semantic-release": "semantic-release",
-        "lint": "eslint src test examples --ext .js",
+        "lint": "eslint src test examples --ext .js --cache --cache-location .eslintcache",
         "test": "jest --coverage"
     },
     "publishConfig": {
