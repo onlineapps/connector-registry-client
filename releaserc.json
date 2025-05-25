@@ -1,5 +1,6 @@
 {
     "branches": ["main"],
+    "repositoryUrl": "https://github.com/onlineapps/agent-registry-client.git",
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
@@ -8,6 +9,11 @@
       }],
       ["@semantic-release/npm", {
         "npmPublish": true
+      }],
+      ["@semantic-release/github", {
+        "assets": ["dist/**", "docs/**"],
+        "failTitle": "Release failed 😞",
+        "successTitle": "Release published 🎉"
       }],
       ["@semantic-release/git", {
         "assets": ["package.json", "CHANGELOG.md"],
