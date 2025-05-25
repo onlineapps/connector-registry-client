@@ -5,6 +5,12 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write      # povolí push tagů a aktualizace release z Actions
+  issues: write        # povolí semantic-release zakládat/fixovat issues (fail comments)
+  packages: write      # pokud publikuješ do GitHub Packages
+  pull-requests: write # pokud bys náhodou chtěl upravovat PRs
+
 jobs:
   release:
     name: Publish via semantic-release
