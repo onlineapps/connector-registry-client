@@ -1,10 +1,5 @@
 {
-  "branches": [
-    {
-      "name": "/^refs\\/tags\\/v\\d+\\.\\d+\\.\\d+$/",
-      "prerelease": false
-    }
-  ],
+  "branches": ["*"],
   "repositoryUrl": "https://github.com/onlineapps/agent-registry-client.git",
   "plugins": [
     "@semantic-release/commit-analyzer",
