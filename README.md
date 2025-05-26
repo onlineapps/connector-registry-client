@@ -98,3 +98,4 @@ Please read [CONTRIBUTING.md](https://github.com/onlineapps/agent-registry-clien
 ## 📜 License
 
 This project is licensed under the MIT License. See [LICENSE](https://github.com/onlineapps/agent-registry-client/blob/main/LICENSE) for details.
+
