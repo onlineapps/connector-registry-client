@@ -1,5 +1,5 @@
 {
-  "branches": ["*"],
+  "branches": ["**"],
   "repositoryUrl": "https://github.com/onlineapps/agent-registry-client.git",
   "plugins": [
     "@semantic-release/commit-analyzer",
