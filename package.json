@@ -53,6 +53,6 @@
         "semantic-release": "^22.0.12"
     },
     "engines": {
-        "node": ">=14"
+        "node": ">=18"
     }
 }
