@@ -37,15 +37,25 @@ jobs:
           git status
           cat .releaserc
 
-      - name: Debug environment
-        run: |
-          echo "NPM_TOKEN is set: ${NPM_TOKEN:0:5}..."
-          npx semantic-release --dry-run
 
       - name: Run tests & lint
         run: |
           npm run lint
           npm test
+
+      - name: Print resolved config
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npx semantic-release --print-config
+
+      - name: Debug environment
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          echo "NPM_TOKEN is set: ${NPM_TOKEN:0:5}..."
+          npx semantic-release --dry-run
 
       - name: Semantic Release
         env:
