@@ -36,21 +36,8 @@ jobs:
           npm run lint
           npm test
 
-      #- name: Debug .npmrc
-      #  run: cat ~/.npmrc
-      #  env:
-      #    NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-      #    NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - name: Test npm authentication
-        run: npm whoami
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
       - name: Semantic Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
