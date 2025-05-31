@@ -1,3 +1,10 @@
+## [1.0.28](https://github.com/onlineapps/agent-registry-client/compare/v1.0.27...v1.0.28) (2025-05-31)
+
+
+### Bug Fixes
+
+* npm token issue fixed; trying to publish new version of package[#2](https://github.com/onlineapps/agent-registry-client/issues/2) ([1d10e8d](https://github.com/onlineapps/agent-registry-client/commit/1d10e8dd65e8bf11c7aa63bd47a6f7c2678462b2))
+
 ## [1.0.27](https://github.com/onlineapps/agent-registry-client/compare/v1.0.26...v1.0.27) (2025-05-31)
 
 
