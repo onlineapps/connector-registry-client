@@ -1,7 +1,10 @@
 {
   "branches": [
     "main",
-    {"name": "refs/tags/v*.*.*", "prerelease": false}
+    {
+      "name": "v*.*.*",
+      "prerelease": false
+    }
   ],
   "plugins": [
     "@semantic-release/commit-analyzer",
