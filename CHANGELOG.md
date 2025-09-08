@@ -1,3 +1,10 @@
+## [1.0.29](https://github.com/onlineapps/connector-registry-client/compare/v1.0.28...v1.0.29) (2025-09-08)
+
+
+### Bug Fixes
+
+* npm token issue fixed; trying to publish new version of package[#3](https://github.com/onlineapps/connector-registry-client/issues/3) ([64cd0b3](https://github.com/onlineapps/connector-registry-client/commit/64cd0b368bbedab893a73f0e82b4fdd34b423179))
+
 ## [1.0.28](https://github.com/onlineapps/agent-registry-client/compare/v1.0.27...v1.0.28) (2025-05-31)
 
 
