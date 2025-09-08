@@ -1,8 +1,8 @@
-# @onlineapps/agent-registry-client
+# @onlineapps/connector-registry-client
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/onlineapps/agent-registry-client/nodejs.yml?branch=main)](https://github.com/onlineapps/agent-registry-client/actions)
-[![Coverage Status](https://codecov.io/gh/onlineapps/agent-registry-client/branch/main/graph/badge.svg)](https://codecov.io/gh/onlineapps/agent-registry-client)
-[![npm version](https://img.shields.io/npm/v/@onlineapps/agent-registry-client)](https://www.npmjs.com/package/@onlineapps/agent-registry-client)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/onlineapps/connector-registry-client/nodejs.yml?branch=main)](https://github.com/onlineapps/connector-registry-client/actions)
+[![Coverage Status](https://codecov.io/gh/onlineapps/connector-registry-client/branch/main/graph/badge.svg)](https://codecov.io/gh/onlineapps/connector-registry-client)
+[![npm version](https://img.shields.io/npm/v/@onlineapps/connector-registry-client)](https://www.npmjs.com/package/@onlineapps/connector-registry-client)
 
 > A lightweight client for microservice registration, heartbeat, and API description exchange via RabbitMQ.
 
@@ -17,9 +17,9 @@
 ## 📦 Installation
 
 ```bash
-npm install @onlineapps/agent-registry-client
+npm install @onlineapps/connector-registry-client
 # or
-yarn add @onlineapps/agent-registry-client
+yarn add @onlineapps/connector-registry-client
 ```
 
 ## 🔧 Quick Start
@@ -28,7 +28,7 @@ yarn add @onlineapps/agent-registry-client
 // Load environment, if using .env
 require('dotenv').config();
 
-const { ServiceRegistryClient, EVENTS } = require('@onlineapps/agent-registry-client');
+const { ServiceRegistryClient, EVENTS } = require('@onlineapps/connector-registry-client');
 
 const client = new ServiceRegistryClient({
   amqpUrl: process.env.AMQP_URL,
@@ -68,12 +68,12 @@ Configuration can be provided via environment variables or constructor options:
 
 ## 🛠️ API Reference
 
-See [docs/api.md](https://github.com/onlineapps/agent-registry-client/blob/main/docs/api.md) for full details on classes, methods, and events.
+See [docs/api.md](https://github.com/onlineapps/connector-registry-client/blob/main/docs/api.md) for full details on classes, methods, and events.
 
 ## 📖 Documentation
 
-* Architecture overview: [docs/architecture.md](https://github.com/onlineapps/agent-registry-client/blob/main/docs/architecture.md)
-* API reference: [docs/api.md](https://github.com/onlineapps/agent-registry-client/blob/main/docs/api.md)
+* Architecture overview: [docs/architecture.md](https://github.com/onlineapps/connector-registry-client/blob/main/docs/architecture.md)
+* API reference: [docs/api.md](https://github.com/onlineapps/connector-registry-client/blob/main/docs/api.md)
 * Examples: [examples/basicUsage.js](https://github.com/onlineapps/agent-registry-client/blob/main/examples/basicUsage.js)
 
 ## ✅ Testing
@@ -98,6 +98,3 @@ Please read [CONTRIBUTING.md](https://github.com/onlineapps/agent-registry-clien
 ## 📜 License
 
 This project is licensed under the MIT License. See [LICENSE](https://github.com/onlineapps/agent-registry-client/blob/main/LICENSE) for details.
-
-
-xxxxx

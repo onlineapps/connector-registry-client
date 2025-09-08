@@ -12,7 +12,7 @@
  *  - 'apiDescriptionSent'
  *  - 'error'
  *
- * @module @onlineapps/agent-registry-client/src/registryClient
+ * @module @onlineapps/connector-registry-client/src/registryClient
  */
 
 const EventEmitter = require('events');

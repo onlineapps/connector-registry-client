@@ -1,10 +1,10 @@
 /**
  * index.js
  *
- * Main entry point for the agent-registry-client module.
+ * Main entry point for the connector-registry-client module.
  * Exports ServiceRegistryClient and the full set of events.
  *
- * @module @onlineapps/agent-registry-client
+ * @module @onlineapps/connector-registry-client
  */
 
 // Core client

@@ -1,11 +1,11 @@
 /**
  * events.js
  *
- * List of events used in the agent-registry-client module.
+ * List of events used in the connector-registry-client module.
  * Acts as a central place for constants to avoid typos
  * when emitting and listening for events.
  *
- * @module @onlineapps/agent-registry-client/src/events
+ * @module @onlineapps/connector-registry-client/src/events
  */
 
 /**

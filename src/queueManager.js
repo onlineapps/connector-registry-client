@@ -2,7 +2,7 @@
  * queueManager.js
  *
  * Responsible for connecting to RabbitMQ and asserting/confirming the existence of queues
- * used by the microservice agent.
+ * used by the microservice connector.
  *
  * Overview:
  *   - Queues managed by the microservice: 'workflow' and '<serviceName>.registry'
@@ -15,13 +15,13 @@
  *   await qm.ensureQueues();
  *   const { channel } = qm;
  *
- * @module @onlineapps/agent-registry-client/src/queueManager
+ * @module @onlineapps/connector-registry-client/src/queueManager
  */
 
 const amqp = require('amqplib');
 
 /**
- * Queue manager for the microservice agent.
+ * Queue manager for the microservice connector.
  */
 class QueueManager {
   /**

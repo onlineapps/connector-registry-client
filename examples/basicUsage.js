@@ -13,7 +13,7 @@
 // Load environment variables from .env file
 require('dotenv').config();
 
-const { ServiceRegistryClient, EVENTS } = require('agent-registry-client');
+const { ServiceRegistryClient, EVENTS } = require('@onlineapps/connector-registry-client');
 
 // Step 1: Create a new ServiceRegistryClient instance
 const registryClient = new ServiceRegistryClient({

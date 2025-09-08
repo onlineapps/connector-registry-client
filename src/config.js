@@ -4,7 +4,7 @@
  * Loads and validates configuration variables via environment variables.
  * Uses dotenv to load the .env file and Joi for validation.
  *
- * @module @onlineapps/agent-registry-client/src/config
+ * @module @onlineapps/connector-registry-client/src/config
  */
 
 // Load .env (if it exists)
