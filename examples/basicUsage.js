@@ -20,6 +20,7 @@ const registryClient = new ServiceRegistryClient({
   amqpUrl: process.env.AMQP_URL,
   serviceName: process.env.SERVICE_NAME || 'invoicing',
   version: process.env.SERVICE_VERSION || '1.0.0',
+  specificationEndpoint: process.env.SPECIFICATION_ENDPOINT || '/api/v1/specification',
   heartbeatInterval: parseInt(process.env.HEARTBEAT_INTERVAL, 10) || 10000,
   apiQueue: process.env.API_QUEUE,
   registryQueue: process.env.REGISTRY_QUEUE

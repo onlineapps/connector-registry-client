@@ -25,18 +25,20 @@ class ServiceRegistryClient extends EventEmitter {
    * @param {string} opts.amqpUrl - AMQP URI for connecting to RabbitMQ
    * @param {string} opts.serviceName - Name of the service (e.g., 'invoicing')
    * @param {string} opts.version - Version of the service (e.g., '1.2.0')
+   * @param {string} [opts.specificationEndpoint='/api/v1/specification'] - Endpoint where API specification is available
    * @param {number} [opts.heartbeatInterval=10000] - Heartbeat interval in milliseconds
    * @param {string} [opts.apiQueue='api_services_queue'] - Queue name for heartbeat and API traffic
    * @param {string} [opts.registryQueue='registry_office'] - Queue name for registry messages
    */
-  constructor({ amqpUrl, serviceName, version, heartbeatInterval = 10000,
-                apiQueue = 'api_services_queue', registryQueue = 'registry_office' }) {
+  constructor({ amqpUrl, serviceName, version, specificationEndpoint = '/api/v1/specification',
+                heartbeatInterval = 10000, apiQueue = 'api_services_queue', registryQueue = 'registry_office' }) {
     super();
     if (!amqpUrl || !serviceName || !version) {
       throw new Error('amqpUrl, serviceName, and version are required');
     }
     this.serviceName = serviceName;
     this.version = version;
+    this.specificationEndpoint = specificationEndpoint;
     this.heartbeatInterval = heartbeatInterval;
     this.apiQueue = apiQueue;
     this.registryQueue = registryQueue;
@@ -97,6 +99,7 @@ class ServiceRegistryClient extends EventEmitter {
       type: 'heartbeat',
       serviceName: this.serviceName,
       version: this.version,
+      specificationEndpoint: this.specificationEndpoint,
       timestamp: new Date().toISOString()
     };
     await this.queueManager.channel.assertQueue(this.apiQueue, { durable: true });
